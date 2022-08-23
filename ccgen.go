@@ -1,4 +1,4 @@
-package ccgen
+package ccgensb
 
 import (
 	"math/rand"

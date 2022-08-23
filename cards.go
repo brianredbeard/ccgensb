@@ -1,4 +1,4 @@
-package ccgen
+package ccgensb
 
 // Supported card types
 const (
@@ -14,6 +14,7 @@ const (
 	Unionpay
 	Visa
 	Mir
+	ShadyBucks
 )
 
 // Holds valid card number length
@@ -30,6 +31,7 @@ var cardLength = map[CardType][]int{
 	Unionpay:        {16, 17, 18, 19},
 	Visa:            {13, 16, 19},
 	Mir:             {13, 16},
+	ShadyBucks:      {16},
 }
 
 // First N digits reserved by the card scheme
@@ -56,6 +58,7 @@ var cardPrefix = map[CardType][]string{
 		"62215", "62216", "62217", "62218", "62219", "6222", "6223",
 		"6224", "6225", "6226", "6227", "6228", "62290", "62291",
 		"622920", "622921", "622922", "622923", "622924", "622925"},
-	Visa: {"4"},
-	Mir:  {"2200", "2201", "2202", "2203", "2204"},
+	Visa:       {"4"},
+	Mir:        {"2200", "2201", "2202", "2203", "2204"},
+	ShadyBucks: {"89979866722"},
 }
